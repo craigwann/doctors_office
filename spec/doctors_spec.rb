@@ -22,13 +22,13 @@ describe(Doctor) do
       expect(Doctor.all()).to(eq([doctor]))
     end
   end
-#
-#   describe("#name") do
-#     it("tells you its name") do
-#       list = List.new({:name => "Epicodus stuff", :id => nil})
-#       expect(list.name()).to(eq("Epicodus stuff"))
-#     end
-#   end
+
+  describe("#name") do
+    it("tells you the doctor name") do
+      doctor = Doctor.new({:name => "Dr. Bob", :specialty =>"dermatology", :id => nil})
+      expect(doctor.name()).to(eq("Dr. Bob"))
+    end
+  end
 #
 #   describe("#id") do
 #     it("sets its ID when you save it") do
