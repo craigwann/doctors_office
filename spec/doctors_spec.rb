@@ -8,6 +8,15 @@ describe(Doctor) do
       expect(doctor1).to(eq(doctor2))
     end
   end
+  describe("#save") do
+    it("lets you save doctors to the database") do
+      doctor = Doctor.new({:name => "Dr. Craig", :specialty =>"dermatology", :id => nil})
+      doctor.save()
+      expect(Doctor.all()).to(eq([doctor]))
+    end
+  end
+
+
 #   describe(".all") do
 #     it("starts off with no lists") do
 #       expect(List.all()).to(eq([]))
@@ -29,13 +38,6 @@ describe(Doctor) do
 #     end
 #   end
 #
-#   describe("#save") do
-#     it("lets you save lists to the database") do
-#       list = List.new({:name => "Epicodus stuff", :id => nil})
-#       list.save()
-#       expect(List.all()).to(eq([list]))
-#     end
-#   end
 #
 
 end
