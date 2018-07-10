@@ -29,15 +29,15 @@ describe(Doctor) do
       expect(doctor.name()).to(eq("Dr. Bob"))
     end
   end
-#
-#   describe("#id") do
-#     it("sets its ID when you save it") do
-#       list = List.new({:name => "Epicodus stuff", :id => nil})
-#       list.save()
-#       expect(list.id()).to(be_an_instance_of(Integer))
-#     end
-#   end
-#
-#
+
+  describe("#id") do
+    it("sets its ID when you save it") do
+      doctor = Doctor.new({:name => "Dr. Bob", :specialty =>"dermatology", :id => nil})
+      doctor.save()
+      expect(doctor.id()).to(be_an_instance_of(Integer))
+    end
+  end
+
+
 
 end
